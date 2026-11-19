@@ -4,14 +4,30 @@
 
 @section Scripts{
     <script>
-        // TODO: Écrire votre script
+        $.get('/Home/Partielle', null, 
+            function(data){
+                 $("#partielle").html(data);
+        });
+
+        let data = {
+               qty: x,   // Remplacez x par le code qui permet d’aller chercher la valeur du input
+               texte: y  // Idem
+            };
+
+
     </script>
 }
 
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
     <!--Utiliser ce div pour afficher la 1ere vue partielle-->
-    <div></div>
+    <div id="partielle"></div>
     <!--Utiliser ce div pour afficher la 2e vue partielle-->
-    <div></div>
+
+    <div>
+        <input type="number" id="qty"/>
+        <input type="text" id="texte"/>
+        <button type="button" id="btnEnvoyer" class="btn btn-primary">Envoyer</button>
+    </div>
+
 </div>

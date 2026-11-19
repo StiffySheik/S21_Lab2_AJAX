@@ -19,6 +19,10 @@ namespace ExemplesAJAX.Controllers
         {
             return View();
         }
+        public IActionResult Partielle()
+        {
+            return PartialView("Partielle");
+        }
 
         public IActionResult Privacy()
         {
